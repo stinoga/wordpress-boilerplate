@@ -1,0 +1,382 @@
+/* ==========================================================================
+	Imports
+/* ========================================================================== */
+@import 'reset', 'variables';
+
+/* ==========================================================================
+	Base
+/* ========================================================================== */
+html {
+	height: 100%;
+	font-size: 100%;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+html,
+button,
+input,
+select,
+textarea {
+	font-family: Arial, sans-serif;
+	color: $color_body_copy;
+}
+body {
+	height: 100%;
+	margin: 0;
+	font-size: $size_base;
+	line-height: 1.4;
+	background: #e1e1e1;
+}
+/*	Apply to all elements. In a responsive design, this is almost always a good idea */
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* ==========================================================================
+	Links
+/* ========================================================================== */
+a {
+	color: $color_link;
+	text-decoration: underline;
+}
+a:focus,
+a:hover {
+	color: darken($color_link, 25%);
+}
+a:focus {
+	outline: thin dotted;
+}
+a:active,
+a:hover {
+	outline: 0;
+}
+
+/* ==========================================================================
+	Typography
+/* ========================================================================== */
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+	margin: 0 0 $size_base;
+	line-height: $size_base * 1.5;
+}
+h1 {
+	font-size: $size_base * 2;
+}
+h2 {
+	font-size: $size_base * 1.5;
+}
+h3 {
+	font-size: $size_base * 1.3;
+}
+h4 {
+	font-size: $size_base * 1.3;
+	font-weight: normal;
+}
+h5, h6 {
+	font-size: $size_base * 1.1;
+}
+
+/* Content Block Elements */
+dl,
+menu,
+ol,
+ul,
+p,
+pre {
+	margin: 0 0 $size_base;
+}
+
+/* Paragraphs */
+p {
+
+}
+
+/* Lists */
+menu,
+ol,
+ul {
+	padding: 0 0 0 $size_base * 2;
+}
+
+/* Selection Colors */
+::-moz-selection {
+	background: $color_body_copy;
+	color: $color_opposite;
+	text-shadow: none;
+}
+::selection {
+	background: $color_body_copy;
+	color: $color_opposite;
+	text-shadow: none;
+}
+
+/* =============================================================================
+	Helper Classes
+/* ========================================================================== */
+/* Prefixed with tags to override default tag styling for these elemets if .button is added */
+button,
+.button,
+a.button,
+input.button {
+	display: inline-block;
+}
+button:focus,
+.button:focus,
+a.button:focus,
+input.button:focus,
+button:hover,
+.button:hover,
+a.button:hover,
+input.button:hover {
+
+}
+button:active,
+.button:active,
+a.button:active,
+input.button:active {
+
+}
+
+/* Responsive Media Styles */
+.media {
+	/* Set width on this selector based on design and needs */
+}
+.media img,
+.media video,
+.media object,
+.media iframe {
+	width: 100%;
+	height: auto;
+}
+
+/* Clear Fix */
+.clearfix {
+	&:before,
+	&:after {
+		content: " ";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+/* Floats */
+.floatleft {
+	float: left;
+}
+.floatright {
+	float: right;
+}
+
+/* =============================================================================
+	Structural Styles, Media Queries & Page Styling
+/* ========================================================================== */
+
+/* Less than 320px but will apply at all sizes */
+#page-wrap {
+	width: 90%;
+	margin: 0 auto;
+	-webkit-box-shadow: 0 0 $size_base * 3 0 #444;
+	box-shadow: 0 0 $size_base * 3 0 #444;
+}
+#page-header {
+	padding: $size_base;
+	background: url($images_dir + 'black_lozenge.png');
+}
+#page-logo {
+	color: $color_opposite;
+
+	a {
+		color: $color_opposite;
+	}
+}
+#page-header ul {
+	list-style: none;
+	padding: 0;
+
+	li {
+		cursor: pointer;
+		padding: $size_base / 2 $size_base;
+		margin: 0 0 $size_base / 2;
+
+		-webkit-border-radius: $size_base * 2;
+		border-radius: $size_base * 2;
+
+		background: #298cba; /* Old browsers */
+		background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzI5OGNiYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxZDYzODUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+		background: -moz-linear-gradient(top,  #298cba 0%, #1d6385 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#298cba), color-stop(100%,#1d6385)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  #298cba 0%,#1d6385 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  #298cba 0%,#1d6385 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  #298cba 0%,#1d6385 100%); /* IE10+ */
+		background: linear-gradient(to bottom,  #298cba 0%,#1d6385 100%); /* W3C */
+
+		.lt-ie9 & {
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#298cba', endColorstr='#1d6385',GradientType=0 ); /* IE6-8 */
+		}
+
+		a {
+			color: #fff;
+			text-decoration: none;
+		}
+
+		&:hover a {
+			color: $color_body_copy;
+		}
+	}
+}
+
+/* Content */
+#content-wrap {
+	padding: $size_base;
+	background: #fff;
+}
+.article {
+	margin-bottom: $size_base;
+	border-bottom: 1px solid #444;
+}
+.article-header {
+	margin-bottom: $size_base;
+	padding-bottom: $size_base;
+	border-bottom: 1px solid #444;
+}
+.article-title {
+	margin-bottom: 0;
+
+	a {
+		text-decoration: none;
+	}
+}
+.article-info {
+	font-size: .825em;
+}
+
+/* Sidebar */
+#page-sidebar {
+	background: #eee;
+	padding: $size_base;
+
+	-webkit-border-radius: $size_base;
+	border-radius: $size_base;
+
+	& > ul {
+		list-style: none;
+		padding: 0;
+	}
+}
+
+.search-form {
+	background: url($images_dir + 'black_lozenge.png');
+	overflow: hidden;
+	padding: $size_base;
+	margin-bottom: $size_base;
+
+	-webkit-border-radius: $size_base;
+	border-radius: $size_base;
+
+	.input-wrap {
+		float: left;
+
+		label {
+			display: none;
+		}
+		input {
+			width: 100%;
+		}
+	}
+	.search {
+		width: 75%;
+		margin-right: 3%;
+	}
+	.submit {
+		width: 22%;
+	}
+}
+
+/* Footer */
+#page-footer {
+	width: 90%;
+	margin: 0 auto;
+	padding: $size_base 0;
+}
+
+/* 320px to 479px */
+@media only screen and (min-width: 320px) {
+
+}
+
+/* 480px to 639px */
+@media only screen and (min-width: 480px) {
+	#page-header ul {
+		overflow: auto;
+		li {
+			float: left;
+		}
+	}
+}
+
+/* 640px to 767px */
+@media only screen and (min-width: 640px) {
+
+}
+
+/* 768px to 1024px */
+@media only screen and (min-width: 768px) {
+	#page-header {
+		padding: $size_base  $size_base * 2;
+	}
+	#content-wrap {
+		overflow: auto;
+	}
+	#page-content {
+		float: left;
+		width: 55%;
+	}
+	#page-sidebar {
+		float: right;
+		width: 40%;
+	}
+	.search-form {
+		.search {
+			width: 70%;
+		}
+		.submit {
+			width: 27%;
+		}
+	}
+}
+
+/* 1024px to 1534px */
+@media only screen and (min-width: 1024px) {
+	#page-wrap {
+		width: 80%;
+	}
+	#page-content {
+		width: 65%;
+		padding: $size_base;
+	}
+	#page-sidebar {
+		width: 31%;
+	}
+	#page-footer {
+		width: 80%;
+	}
+}
+
+/* More than 1534px */
+@media only screen and (min-width: 1535px) {
+
+}
+
+/* High PX Density */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
+	#page-header {
+		background: url($images_dir + 'black_lozenge_@2X.png');
+	}
+	.search-form {
+		background: url($images_dir + 'black_lozenge@2X.png');
+	}
+}

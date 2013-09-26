@@ -1,0 +1,14 @@
+/* ==========================================================================
+	Variables
+/* ========================================================================== */
+/* Directories */
+$theme_dir: '/<%= userInput.contentDir %>/themes/<%= userInput.themeDir %>/';
+$images_dir: '/<%= userInput.contentDir %>/themes/<%= userInput.themeDir %>/images/';
+
+/* Colors */
+$color_body_copy: #444;
+$color_link: #26527c;
+$color_opposite: #fff;
+
+/* Font Sizes */
+$size_base: 1em;
