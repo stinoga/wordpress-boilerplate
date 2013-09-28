@@ -26,10 +26,10 @@ Boilerplate starter code for Wordpress projects. Uses Grunt and Sass, alongside 
 > git clone https://github.com/stinoga/wordpress-boilerplate.git
 ```
 
-#####2: Install dependent Node packagaes.
+#####2: Install dependent Node and Bower packagaes.
 
 ```js
-> npm install
+> npm install && bower install
 ```
 
 #####3: If your wordpress install is in git, move the gitignore to your root directory.
