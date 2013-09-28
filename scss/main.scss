@@ -1,18 +1,19 @@
 
 // IMPORTING STYLES ============================================================
 
-// Let's normalize the browser styles
-@import 'utilities/normalize';
-
 // Site Variables
 @import 'variables';
+
+// Utility modules
+@import 'utilities/normalize',
+        'utilities/grid';
 
 // Base styles are the defaults. They are almost exclusively single element selectors but it could include attribute selectors, pseudo-class selectors, child selectors or sibling selectors. Essentially, a base style says that wherever this element is on the page, it should look like this.
 @import 'base';
 
 // Module styles are the reusable, modular parts of our design. They are the callouts, the sidebar sections, the product lists and so on.
 // TODO: We may want to call these inline via @import and a build script in the future. This will provide the ability to call this css only when needed without an additional request.
-// @import 'modules/nav';
+@import 'modules/nav';
 
 // Layout styles divide the page into sections. Layouts hold one or more modules together.
 @import 'layout';
@@ -22,5 +23,5 @@
 
 // Print styles
 @media print {
-	@import 'utilities/print';
+  @import 'utilities/print';
 }

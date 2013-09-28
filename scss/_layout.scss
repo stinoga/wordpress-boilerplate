@@ -1,5 +1,17 @@
 // LAYOUT ======================================================================
 
+// Clear Fix
+.clearfix {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
 .l-image-replacement {
   text-indent: 100%;
   white-space: nowrap;
@@ -13,33 +25,23 @@
   left: -9999px;
 }
 
-.main {
+.l-main {
   margin-bottom: 4.1rem;
 }
 
-.wrapper {
+.l-wrapper {
   @include breakpoint($bp-1140) {
     max-width: 1000px;
     margin: 0 auto;
   }
 }
 
-.light {
-  color: white;
+// alignment ===================================================================
+
+// Floats
+.l-left {
+  float: left;
 }
-
-.fade {
-  opacity: 0.5;
-}
-
-.l-p-spacing {
-  margin-bottom: 0.75rem;
-}
-
-// text alignment ==============================================================
-
-.text-left {
-  @include breakpoint($bp-768) {
-    width: 50%;
-  }
+.l-right {
+  float: right;
 }

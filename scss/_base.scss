@@ -73,23 +73,3 @@ ul, ol {
   color: $c_opposite;
   text-shadow: none;
 }
-
-// Clear Fix
-.clearfix {
-  &:before,
-  &:after {
-    content: " ";
-    display: table;
-  }
-  &:after {
-    clear: both;
-  }
-}
-
-// Floats
-.floatleft {
-  float: left;
-}
-.floatright {
-  float: right;
-}
