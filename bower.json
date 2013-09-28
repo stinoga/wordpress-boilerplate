@@ -1,0 +1,12 @@
+{
+  "name": "Wordpress-boilerplate",
+  "version": "0.0.1",
+  "ignore": [
+    ".jshintrc",
+    "**/*.txt"
+  ],
+  "dependencies": {
+    "jquery": "~1.9.1",
+    "modernizr": "~2.6.2"
+  }
+}

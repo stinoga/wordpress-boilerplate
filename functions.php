@@ -2,8 +2,13 @@
 add_action('wp_enqueue_scripts', 'theme_enqueue_scripts');
 function theme_enqueue_scripts(){
 
-	wp_register_script('modernizr', get_bloginfo('template_url') . '/js/modernizr.js');
-	wp_enqueue_script('modernizr');
+	// Uncomment for jquery or modernizr
+
+	// wp_register_script('modernizr', get_bloginfo('template_url') . '/libraries/thirdparty/modernizr/modernizr.js');
+	// wp_enqueue_script('modernizr');
+
+	// wp_register_script('jquery', get_bloginfo('template_url') . '/libraries/thirdparty/jquery/jquery.min.js');
+	// wp_enqueue_script('jquery');
 
 	// TODO: Do we need this?
 	wp_register_script('livereload', '<%= userInput.url %>:35729/livereload.js?snipver=1', null, false, true);

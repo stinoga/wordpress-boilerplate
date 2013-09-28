@@ -1,7 +1,0 @@
-{
-  "name": "Wordpress-boilerplate",
-  "version": "0.0.1",
-  "dependencies": {
-    "jquery": "~1.9.0"
-  }
-}
