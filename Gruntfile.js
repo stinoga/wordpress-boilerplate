@@ -57,7 +57,8 @@ module.exports = function(grunt) {
 					}
 				],
 				options : {
-					style : 'compressed'
+					style : 'compressed',
+          compass: true
 				}
 			},
 			dev : {
@@ -71,7 +72,8 @@ module.exports = function(grunt) {
 					}
 				],
 				options : {
-					style : 'expanded'
+					style : 'expanded',
+          compass: true
 				}
 			}
 		},

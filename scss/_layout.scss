@@ -1,0 +1,45 @@
+// LAYOUT ======================================================================
+
+.l-image-replacement {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+}
+
+.l-sr-text {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+.main {
+  margin-bottom: 4.1rem;
+}
+
+.wrapper {
+  @include breakpoint($bp-1140) {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}
+
+.light {
+  color: white;
+}
+
+.fade {
+  opacity: 0.5;
+}
+
+.l-p-spacing {
+  margin-bottom: 0.75rem;
+}
+
+// text alignment ==============================================================
+
+.text-left {
+  @include breakpoint($bp-768) {
+    width: 50%;
+  }
+}

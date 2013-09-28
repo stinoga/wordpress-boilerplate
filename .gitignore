@@ -1,0 +1,8 @@
+local-config.php
+.htaccess
+wp-content/w3tc/*
+advanced-cache.php
+object-cache.php
+w3-total-cache-config-preview.php
+wp-content/uploads/*
+node_modules

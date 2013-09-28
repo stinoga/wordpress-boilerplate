@@ -1,0 +1,12 @@
+.hidden {
+  max-height: 0;
+}
+
+.not-hidden {
+  max-height: 500px;
+}
+
+.toggle {
+  @include transition(all 0.6s ease-out);
+  overflow: hidden;
+}

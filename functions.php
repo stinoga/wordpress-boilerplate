@@ -5,10 +5,11 @@ function theme_enqueue_scripts(){
 	wp_register_script('modernizr', get_bloginfo('template_url') . '/js/modernizr.js');
 	wp_enqueue_script('modernizr');
 
+	// TODO: Do we need this?
 	wp_register_script('livereload', '<%= userInput.url %>:35729/livereload.js?snipver=1', null, false, true);
 	wp_enqueue_script('livereload');
 
-	wp_enqueue_style('global', get_bloginfo('template_url') . '/css/global.css');
+	wp_enqueue_style('main', get_bloginfo('template_url') . '/css/main.css');
 }
 
 //Add Featured Image Support

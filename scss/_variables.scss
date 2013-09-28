@@ -1,11 +1,22 @@
-// VARIABLES ===================================================================
+@import 'compass', 'breakpoint';
 
-@import 'breakpoint';
+// VARIABLES ===================================================================
 
 // Colors
 $c_body_copy: #444;
 $c_link: #26527c;
 $c_opposite: #fff;
 
-// Font Sizes
-$size_base: 1em;
+// Fonts
+$t-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$t-bold: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$size_base: 1rem;
+
+// media queries
+$breakpoint-to-ems: true;
+
+$bp-481: 30.0625em;
+$bp-768: 48em;
+$bp-1030: 64.375em;
+$bp-1140: 71.25em;
+$bp-2x: 2 device-pixel-ratio;
