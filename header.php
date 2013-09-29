@@ -13,8 +13,8 @@
 		<?php wp_head() ?>
     </head>
     <body <?php body_class() ?>>
-		<header id="page-header">
-			<h1 id="page-logo">
+		<header class="page-header">
+			<h1 class="page-logo">
 				<?php if (!is_front_page()): ?>
 					<a href="<?php bloginfo('url') ?>" title="<?php bloginfo('name') ?> - <?php bloginfo('description') ?>">
 						<?php bloginfo('name') ?>

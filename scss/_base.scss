@@ -5,7 +5,7 @@
 html {
   height: 100%;
   color: hsl(0,0%,25%);
-  font: 300 1em/1.333 "proxima-nova", sans-serif;
+  font: 1em/1.333 $t-base;
 }
 
 h1 {
@@ -18,7 +18,6 @@ h1 {
 
 h2 {
   margin: 0 0 1em;
-  font: 700 1.3em "ff-tisa-web-pro", serif;
   -webkit-font-kerning: normal;
 }
 
@@ -63,13 +62,8 @@ ul, ol {
 
 // Selection colors
 
-::-moz-selection {
-  background: $c_body_copy;
-  color: $c_opposite;
-  text-shadow: none;
-}
 ::selection {
-  background: $c_body_copy;
-  color: $c_opposite;
+  background: $c-link;
+  color: invert($c-link);
   text-shadow: none;
 }

@@ -1,6 +1,9 @@
 
 // IMPORTING STYLES ============================================================
 
+// Setup our custom awesome type
+@import 'utilities/type';
+
 // Site Variables
 @import 'variables';
 
@@ -13,7 +16,8 @@
 
 // Module styles are the reusable, modular parts of our design. They are the callouts, the sidebar sections, the product lists and so on.
 // TODO: We may want to call these inline via @import and a build script in the future. This will provide the ability to call this css only when needed without an additional request.
-@import 'modules/nav';
+@import 'modules/nav',
+        'modules/footer';
 
 // Layout styles divide the page into sections. Layouts hold one or more modules together.
 @import 'layout';
