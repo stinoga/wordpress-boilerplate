@@ -33,3 +33,7 @@ Boilerplate starter code for Wordpress projects. Uses Grunt and Sass, alongside 
 ```
 
 #####3: If your wordpress install is in git, move the gitignore to your root directory.
+
+##Thanks
+
+Thanks to the folks at [Bearded](http://bearded.com/). I stole some some pieces from their excellent starter kit, [Stubble](https://github.com/beardedstudio/stubble?source=cc).

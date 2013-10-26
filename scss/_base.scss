@@ -9,21 +9,27 @@ html {
 }
 
 h1 {
-  margin: 0 0 0.5em;
-  font-weight: 700;
-  font-size: 3em;
-  line-height: 1;
-  -webkit-font-kerning: normal;
+  @include heading-1;
 }
 
 h2 {
-  margin: 0 0 1em;
-  -webkit-font-kerning: normal;
+  @include heading-2;
 }
 
 h3 {
-  margin: 0 0 1em;
-  font-size: 1em;
+  @include heading-3;
+}
+
+h4 {
+  @include heading-4;
+}
+
+h5 {
+  @include heading-5;
+}
+
+h6 {
+  @include heading-6;
 }
 
 pre, p {

@@ -33,6 +33,38 @@
   transition: all 0.3s ease-out;
 }
 
+// TYPE mixins =================================================================
+
+@mixin copy-face {
+  font-family: georgia, "Times New Roman", times, serif;
+  font-weight: normal;
+}
+
+@mixin title-face {
+  font-family: arial, "helvetica neue", helvetica, sans-serif;
+  font-weight: bold;
+}
+
+@mixin link {
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover, &:focus {
+    color: $link-color-hover;
+    text-decoration: underline;
+  }
+}
+
+@mixin heading-link {
+  color: $heading-color;
+  text-decoration: none;
+
+  &:hover, &:focus {
+    color: darken($heading-color, 15%);
+    text-decoration: underline;
+  }
+}
+
 // Heading Type ================================================================
 
 @mixin heading {
