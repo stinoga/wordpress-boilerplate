@@ -9,12 +9,14 @@
 
 // Utility modules
 @import "lib/normalize",
+        // If you want to go bleeding edge, call the flex grid:
+        // "lib/flexgrid";
         "lib/grid";
 
 // Base styles are the defaults. They are almost exclusively single element selectors but it could include attribute selectors, pseudo-class selectors, child selectors or sibling selectors. Essentially, a base style says that wherever this element is on the page, it should look like this.
 @import "base";
 
-// Layout and state styling global to the site
+// Layout and state styling global to the site =================================
 
 // Layout styles divide the page into sections. Layouts hold one or more modules together.
 
@@ -26,7 +28,7 @@
 @import "modules/nav",
         "modules/footer";
 
-// Print styles
+// Print styles ================================================================
 @media print {
   @import "utilities/print";
 }

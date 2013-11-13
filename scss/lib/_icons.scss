@@ -1,0 +1,29 @@
+// Icon font clases and font declaration =======================================
+
+@font-face {
+  font-family: 'icomoon';
+    src:url('../fonts/icomoon.eot');
+    src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.woff') format('woff'),
+    url('../fonts/icomoon.ttf') format('truetype'),
+    url('../fonts/icomoon.svg#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Icon font CSS
+[data-icon]:before {
+  font-family: 'icomoon';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  line-height: 1;
+  font-smoothing: antialiased;
+}
+
+.icon-alone {
+  // Fix for clickability issue in WebKit
+  display: block;
+  padding: 0 20px;
+  transition: all 0.3s ease-out;
+}
