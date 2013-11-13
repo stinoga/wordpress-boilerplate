@@ -1,17 +1,23 @@
 
 // IMPORTING STYLES ============================================================
 
-// Setup our custom awesome type
-@import "lib/type";
+// Normalize the default browser styles
+@import "lib/normalize";
 
 // Site Variables
 @import "lib/variables";
 
-// Utility modules
-@import "lib/normalize",
-        // If you want to go bleeding edge, call the flex grid:
-        // "lib/flexgrid";
-        "lib/grid";
+// Setup our custom awesome type
+@import "lib/type",
+        "lib/fonts";
+
+// Icons
+// @import "lib/icons";
+
+// The responsive grid
+// If you want to go bleeding edge, call the flex grid:
+// @import "lib/flexgrid";
+@import "lib/grid";
 
 // Base styles are the defaults. They are almost exclusively single element selectors but it could include attribute selectors, pseudo-class selectors, child selectors or sibling selectors. Essentially, a base style says that wherever this element is on the page, it should look like this.
 @import "base";
@@ -25,10 +31,11 @@
 
 // Module styles are the reusable, modular parts of our design. They are the callouts, the sidebar sections, the product lists and so on.
 // TODO: We may want to call these inline via @import and a build script in the future. This will provide the ability to call this css only when needed without an additional request.
-@import "modules/nav",
-        "modules/footer";
+@import "modules/header",
+        "modules/footer",
+        "modules/notifications";
 
 // Print styles ================================================================
 @media print {
-  @import "utilities/print";
+  @import "lib/print";
 }
