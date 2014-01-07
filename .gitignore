@@ -8,3 +8,4 @@ wp-content/uploads/*
 node_modules
 .sass-cache
 *.DS_Store
+css
