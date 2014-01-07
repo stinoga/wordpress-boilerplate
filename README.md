@@ -48,6 +48,7 @@ When you are ready to push live, run the build command to minify your files.
 ```js
 > cd {theme_directory}
 > grunt build
+```
 
 ##Thanks
 
