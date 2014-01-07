@@ -14,7 +14,6 @@ module.exports = function(grunt) {
       },
       js : {
         files : ['js/**/*.js'],
-        tasks : ['jshint'],
         options : {
           livereload : 35729
         }
@@ -24,24 +23,6 @@ module.exports = function(grunt) {
         options : {
           livereload : 35729
         }
-      }
-    },
-
-    // JsHint your javascript
-    jshint : {
-      all : ['js/*.js', '!js/modernizr.js', '!js/*.min.js', '!js/vendor/**/*.js'],
-      options : {
-        browser: true,
-        curly: false,
-        eqeqeq: false,
-        eqnull: true,
-        expr: true,
-        immed: true,
-        newcap: true,
-        noarg: true,
-        smarttabs: true,
-        sub: true,
-        undef: false
       }
     },
 
@@ -122,21 +103,35 @@ module.exports = function(grunt) {
       }
     },
 
+    grunticon: {
+      myIcons: {
+        options: {
+          src: "svg/",
+          dest: "images/svg/",
+          defaultWidth: "117px",
+          defaultHeight: "50px"
+        }
+      }
+    }
+
   });
 
   // Default task
   grunt.registerTask('default', ['watch']);
 
+  // Build SVGs if needed
+  grunt.registerTask('icon', ['grunticon']);
+
   // Build task
-  grunt.registerTask('build', ['jshint', 'sass:production', 'imagemin:production', 'svgmin:production']);
+  grunt.registerTask('build', ['sass:production', 'imagemin:production', 'svgmin:production']);
 
   // Template Setup Task
   grunt.registerTask('setup', ['sass:dev'])
 
   // Load up tasks
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-grunticon');
   grunt.loadNpmTasks('grunt-autoprefixer');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-svgmin');
