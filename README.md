@@ -22,23 +22,27 @@ Boilerplate starter code for Wordpress projects. Uses Grunt and Sass, alongside 
 
 1: Clone into your Wordpress theme directory.
 
-```js
+```Shell
 > cd {theme_directory}
 > git clone https://github.com/stinoga/wordpress-boilerplate.git
 ```
+From now on, all your work will be done in your wordpress-boilerplate directory.
 
 2: Install dependent Node and Bower packagaes.
 
-```js
-> cd wordpress-boilerplate
+```Shell
 > npm install && bower install
 ```
 
-3: If your wordpress install is in git, move the gitignore to your root directory.
+3: If your wordpress install is in git, move the gitignore to your root directory. OPTIONAL: You can also remove the git submodule for this theme:
+
+```Shell
+> rm -rf .git
+```
 
 4: Code!
 
-```js
+```Shell
 > grunt
 ```
 
@@ -46,8 +50,7 @@ Boilerplate starter code for Wordpress projects. Uses Grunt and Sass, alongside 
 
 When you are ready to push live, run the build command to minify your files.
 
-```js
-> cd {theme_directory}
+```Shell
 > grunt build
 ```
 
