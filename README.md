@@ -34,10 +34,11 @@ From now on, all your work will be done in your wordpress-boilerplate directory.
 > npm install && bower install
 ```
 
-3: If your wordpress install is in git, move the gitignore to your root directory. OPTIONAL: You can also remove the git submodule for this theme:
+3: If your wordpress install is in git, move the gitignore to your root directory. You can also remove the git submodule for this theme. Run these from the root of your Wordpress install:
 
 ```Shell
-> rm -rf .git
+> git rm --cached wp-content/themes/wordpress-boilerplate/
+> rm -rf wp-content/themes/wordpress-boilerplate/.git
 ```
 
 4: Code!
