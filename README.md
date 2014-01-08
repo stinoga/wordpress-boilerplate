@@ -30,6 +30,7 @@ Boilerplate starter code for Wordpress projects. Uses Grunt and Sass, alongside 
 2: Install dependent Node and Bower packagaes.
 
 ```js
+> cd wordpress-boilerplate
 > npm install && bower install
 ```
 

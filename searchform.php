@@ -5,5 +5,5 @@
     </div>
     <div class="input-wrap submit">
         <input type="submit" value="Search" class="button" />
-	</div>
+  </div>
 </form>
