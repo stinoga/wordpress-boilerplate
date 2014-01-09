@@ -1,11 +1,28 @@
+# Local server config
 local-config.php
 .htaccess
-wp-content/w3tc/*
+
+# Wordpress specific goodies we don't need in Git
+wp-content/w3tc/
 advanced-cache.php
 object-cache.php
 w3-total-cache-config-preview.php
-wp-content/uploads/*
+wp-content/uploads/
+wp-content/blogs.dir/
+wp-content/upgrade/
+wp-content/backup-db/
+wp-content/advanced-cache.php
+wp-content/wp-cache-config.php
+sitemap.xml
+*.log
+wp-content/cache/
+wp-content/backups/
+sitemap.xml.gz
+
+# Extras such as node and preprocessors
 node_modules
 .sass-cache
 *.DS_Store
+
+# Built directories
 css
