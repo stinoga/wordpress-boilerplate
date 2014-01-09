@@ -41,7 +41,9 @@ From now on, all your work will be done in your wordpress-boilerplate directory.
 > rm -rf wp-content/themes/wordpress-boilerplate/.git
 ```
 
-4: Code!
+4: Pull the wordpress starter files from [this repository](https://github.com/stinoga/wordpress-starter) and drop them in the root folder of the site.
+
+5: Code!
 
 ```Shell
 > grunt
