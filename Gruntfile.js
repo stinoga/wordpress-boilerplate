@@ -75,6 +75,14 @@ module.exports = function(grunt) {
       }
     },
 
+    cssmin: {
+      production: {
+        files: {
+          'css/main.css': ['css/main.css']
+        }
+      }
+    },
+
     // Image min
     imagemin : {
       production : {
@@ -123,12 +131,13 @@ module.exports = function(grunt) {
   grunt.registerTask('icon', ['grunticon']);
 
   // Build task
-  grunt.registerTask('build', ['sass:production', 'imagemin:production', 'svgmin:production']);
+  grunt.registerTask('build', ['sass:production', 'imagemin:production', 'svgmin:production', 'autoprefixer', 'cssmin:production']);
 
   // Template Setup Task
   grunt.registerTask('setup', ['sass:dev'])
 
   // Load up tasks
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-grunticon');
   grunt.loadNpmTasks('grunt-autoprefixer');
