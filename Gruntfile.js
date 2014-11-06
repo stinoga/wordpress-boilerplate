@@ -5,24 +5,18 @@ module.exports = function(grunt) {
     // Watches for changes and runs tasks
     // Livereload is setup for the 35729 port by default
     watch : {
+      options : {
+        livereload : true
+      },
       sass : {
         files : ['scss/**/*.scss'],
-        tasks : ['sass:dev', 'autoprefixer'],
-        options : {
-          livereload : 35729
-        }
+        tasks : ['sass:dev', 'autoprefixer']
       },
       js : {
-        files : ['js/**/*.js'],
-        options : {
-          livereload : 35729
-        }
+        files : ['js/**/*.js']
       },
       php : {
-        files : ['**/*.php'],
-        options : {
-          livereload : 35729
-        }
+        files : ['**/*.php']
       }
     },
 
